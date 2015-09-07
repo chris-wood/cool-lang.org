@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html" />
 <title>COOL</title>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 
@@ -11,13 +12,13 @@
 <div id="container">
     <ul class="navigation">
         <li id="header" class="section">
-            <a rel="home" href="http://cool-lang.org/">COOL</a>
+            <h2><a rel="home" href="http://cool-lang.org/"><b>COOL</b></a></h2>
         </li>
         <li class="section">
             about
             <ul>
-                <li class="article"><a rel="bookmark" href="http://cool-lang.org/" ><span class=selected>introduction</span></a></li>
-                <li class="article"><a rel="bookmark" href="http://en.wikibooks.org/wiki/Programming:cool">wiki</a></li>
+                <li class="article"><a rel="bookmark" href="http://cool-lang.org/">introduction</a></li>
+                <!-- <li class="article"><a rel="bookmark" href="http://en.wikibooks.org/wiki/Programming:cool">wiki</a></li> -->
             </ul>
         </li>
         <li class="section">
@@ -33,27 +34,42 @@
             <ul>
                 <li class="article"><a rel="bookmark" href="http://www.cool-lang.org/docs/cool.html">guide</a></li>
                 <li class="article"><a rel="bookmark" href="http://www.cool-lang.org/docs/reference/index.html">reference</a></li>
-                <li class="article"><a rel="bookmark" href="http://www.cool-lang.org/docs/cool-tutorial.html">tutorial</a></li>
-                <li class="artcle"><a rel="bookmark" href="http://www.cool-lang.org/docs/cool-talks.html">talks</a></li>
             </ul>
         </li>
     </ul>
     <div id="content" class="about">
+        <h3>overview</h3>
         <br>
-        <h5>overview</h5>
+        <h5>abstract</h5>
         <p>
-            COOL is a prototypical COntent Oriented Lisp whose goal is to be a
-            general-purpose programming language with a radical message-passing
-            programming model. 
+            COOL is a prototypical COntent Oriented Lisp derivative whose goal is
+            to be a general-purpose programming language with a radical message-passing
+            and I/O programming model.
         </p>
 
         <h5>features</h5>
         <p>
-            ccn-lite integration<br>
-            64bit clean C99 implementation<br>
-            embeddable, exceptions, unicode<br>
+            not a whole lot yet... it's work in progress.<br/>
         </p>
-</p>
+    </div>
 
+    <div class="about">
+        <h3>examples</h3>
+        <pre class="snippet-border">
+            <code>
+                COOL> print "Hello, world!"
+                (print 'Hello, world!')
+                'Hello, world!'
+
+                COOL> + 1 2
+                (+ 1 2)
+                3
+
+                COOL> == 5 1
+                (== 5 1)
+                0
+            </code>
+        </pre>
+    </div>
 </body>
 </html>
