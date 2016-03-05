@@ -43,14 +43,26 @@
         <h5>abstract</h5>
         <p>
             COOL is a prototypical COntent Oriented Lisp derivative whose goal is
-            to be a general-purpose programming language with a radical message-passing
+            to be a general-purpose programming language with a different message-passing
             and I/O programming model.
         </p>
 
         <h5>features</h5>
-        <p>
-            not a whole lot yet... it's work in progress.<br/>
-        </p>
+        <ul>
+            <li>Local and global threaded actors</li>
+            <li>One-shot threads</li>
+            <li>Value and environment (closure) serialization</li>
+            <li>Uniform file and network I/O API based on names</li>
+        </ul>
+
+        <h5>work in progress</h5>
+        <ul>
+            <li>Runtime support for lightweight (green) threads</li>
+            <li>Structure or record types</li>
+            <li>Immutable field enforcement and type checks</li>
+            <li>More efficient serialization</li>
+            <li>Data access control via encryption (i.e., sealed values)</li>
+        </ul>
     </div>
 
     <div class="about">
@@ -68,6 +80,13 @@
                 COOL> == 5 1
                 (== 5 1)
                 0
+
+                COOL> spawn "adder" (\ {x} {+ 1 x})
+                (spawn 'adder' (\ {x} {+ 1 x}))
+
+                COOL> <- "adder" {1}
+                (<- 'adder' {1})
+                2
             </code>
         </pre>
     </div>
